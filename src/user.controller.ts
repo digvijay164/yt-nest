@@ -58,26 +58,4 @@ export class UserController {
       data: USERS
     } 
   }
-
-  // @Delete('/video/:id')
-  // deleteUser(@Param('id') id:number, @Body() DTO: Record<string, User>){
-  //   u1 = u1.find((user: User) => +user.id !== +id);
-  //   console.log('ID', id);
-  //   console.log(DTO);
-  //   return{
-  //     message: 'User deleted successfully',
-  //     data: DTO
-  //   }
-  // }
-
-  // @Get('/video/:id')
-  // getUser(@Param('id') id: number, @Body() RequestData: Record<string, User>){
-  //     const ID = u1.find((user: User)=> +user.id === +id);
-  //     console.log('ID', id);
-  //     console.log(RequestData);
-  //     return {
-  //         message: 'GET User by ID successfully',
-  //         data: RequestData
-  //     }
-  // }
 }
