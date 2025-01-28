@@ -1,9 +1,19 @@
+import { Injectable, Scope } from "@nestjs/common";
+
 interface User {
   id: number;
   name: string;
 }
+
+@Injectable({
+  scope: Scope.REQUEST,
+})
 export class UserStore {
   private store = new Map<number, User>();
+
+  constructor() {
+    console.log("userstore init");
+  }
 
   addUser(user: User) {
     this.store.set(user.id, user);
