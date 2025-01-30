@@ -3,6 +3,7 @@ import { Injectable, Module } from "@nestjs/common";
 import { UserController } from "./user.controller";
 import { BehaviorSubject, ReplaySubject } from "rxjs";
 import { UserStore } from "./user.stores";
+import { UserService } from "./user.service";
 // import { UserStore } from './user.stores';
 // const IS_DEV_MODE = true;
 
@@ -17,6 +18,7 @@ class ENVconfig{
 @Module({
   controllers: [UserController],
   providers: [
+    UserService,
     {
       provide: UserStore,
       useClass: UserStore
